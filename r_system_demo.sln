@@ -3,10 +3,53 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.13
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.Model", "rs.model\rs.model.csproj", "{AFFE5BA2-C0BC-45D8-8703-E784337BFC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.Repository", "rs.Repository\rs.Repository.csproj", "{409D6CA5-FB1D-439C-9A32-0F0A6EC2503F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.Contract", "rs.Contract\rs.Contract.csproj", "{1C264554-F086-49ED-A06A-49FA47B6B67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.Helper", "rs.Helper\rs.Helper.csproj", "{EDCB9EA3-E656-4634-84DA-2753141082CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.API", "rs.API\rs.API.csproj", "{03A3EF86-E67C-4A9F-B81C-2C9754852ACF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{23EA7BA9-314F-47FA-84E5-5F055C9B9CCB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rs.Tests", "rs.Tests\rs.Tests.csproj", "{B60AC5C9-9D3C-4E23-8680-A0CE8A12C205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFFE5BA2-C0BC-45D8-8703-E784337BFC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFE5BA2-C0BC-45D8-8703-E784337BFC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFE5BA2-C0BC-45D8-8703-E784337BFC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFE5BA2-C0BC-45D8-8703-E784337BFC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409D6CA5-FB1D-439C-9A32-0F0A6EC2503F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409D6CA5-FB1D-439C-9A32-0F0A6EC2503F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409D6CA5-FB1D-439C-9A32-0F0A6EC2503F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409D6CA5-FB1D-439C-9A32-0F0A6EC2503F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C264554-F086-49ED-A06A-49FA47B6B67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C264554-F086-49ED-A06A-49FA47B6B67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C264554-F086-49ED-A06A-49FA47B6B67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C264554-F086-49ED-A06A-49FA47B6B67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCB9EA3-E656-4634-84DA-2753141082CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCB9EA3-E656-4634-84DA-2753141082CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCB9EA3-E656-4634-84DA-2753141082CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCB9EA3-E656-4634-84DA-2753141082CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A3EF86-E67C-4A9F-B81C-2C9754852ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A3EF86-E67C-4A9F-B81C-2C9754852ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A3EF86-E67C-4A9F-B81C-2C9754852ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A3EF86-E67C-4A9F-B81C-2C9754852ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60AC5C9-9D3C-4E23-8680-A0CE8A12C205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60AC5C9-9D3C-4E23-8680-A0CE8A12C205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60AC5C9-9D3C-4E23-8680-A0CE8A12C205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60AC5C9-9D3C-4E23-8680-A0CE8A12C205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
