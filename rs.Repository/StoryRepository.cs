@@ -18,33 +18,37 @@ namespace rs.Repository
 
         }
 
+        /// <inheritdoc />
         public async Task<List<Story>> GetStoriesAsync(int page, int pageSize)
         {
             var storiesIds = _cache.Get<List<int>>(HttpHelerClient.case_key_stories).Take(200).ToList() ?? new List<int>();
             var startIndex = (page - 1) * pageSize;
             var endIndex = Math.Min(startIndex + pageSize, storiesIds.Count);
-            var stories = new List<Story>();
-            if (startIndex >  endIndex) {
 
+            if (startIndex >= endIndex)
+            {
                 throw new ArgumentException("Invalid data");
             }
-            for(int i = startIndex; i < endIndex; i++)
+
+            var storyTasks = new List<Task<Story?>>();
+
+            for (int i = startIndex; i < endIndex; i++)
             {
-                try
-                {
-                    var story = await _httpHelerClient.HttpGetRequest<Story>($"item/{storiesIds[i]}");
-                    if (story != null)
-                    {
-                        stories.Add(story);
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                
+                var storyTask = _httpHelerClient.HttpGetRequest<Story>($"item/{storiesIds[i]}");
+                storyTasks.Add(storyTask);
             }
-            return stories;
+
+            try
+            {
+                var storiesArray = await Task.WhenAll(storyTasks);
+                var stories = storiesArray.Where(story => story != null).ToList();
+                return stories!;
+            }
+            catch (Exception)
+            {
+                // Log the exception or handle it as needed
+                throw;
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ namespace rs.Helper
             _httpClient = httpClient;
         }
 
+        /// <inheritdoc />
         public async Task<T?> HttpGetRequest<T>(string url)
         {
             var response = await _httpClient.GetAsync($"{baseURl}/{url}.json");

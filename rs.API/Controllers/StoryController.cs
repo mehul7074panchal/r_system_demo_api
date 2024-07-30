@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Net.Mime;
+using Microsoft.AspNetCore.Mvc;
 using rs.Contract;
 using rs.model;
 
@@ -19,9 +20,18 @@ namespace rs.API.Controllers
             _story = story;
         }
 
+
+        /// <summary>
+        /// Fetch a paginated list of stories.
+        /// </summary>
+        /// <param name="page">The page number to fetch.</param>
+        /// <param name="pageSize">The number of stories per page.</param>
+        /// <returns>A response containing the list of stories.</returns>
         [Route("GetStory/{page}/{pageSize}")]
         [HttpGet]
-        [Produces(typeof(Response))]
+        [Produces(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(typeof(Response), 200)]
+        [ProducesResponseType(typeof(Response), 400)]
         public async Task<IActionResult> GetStory(int page, int pageSize)
         {
             try

@@ -53,7 +53,7 @@ catch (Exception ex)
 }
 
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 
 app.UseCors(builder =>
